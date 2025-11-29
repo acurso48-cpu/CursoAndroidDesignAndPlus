@@ -1,14 +1,14 @@
 [versions]
 agp = "8.13.1"
-kotlin = "2.0.21"
-coreKtx = "1.17.0"
+kotlin = "1.9.0"
+coreKtx = "1.10.1"
 junit = "4.13.2"
-junitVersion = "1.3.0"
-espressoCore = "3.7.0"
-appcompat = "1.7.1"
-material = "1.13.0"
-activity = "1.12.0"
-constraintlayout = "2.2.1"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+activity = "1.8.0"
+constraintlayout = "2.1.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,3 +24,35 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
+
+# ---------------- Explicación (Julián - Curso Android Nov/2025 Getafe) ----------------
+#
+# ¡Este es el archivo `libs.versions.toml`, también conocido como "catálogo de versiones" de Gradle!
+#
+# ¿Qué hace este archivo?
+#
+# Este archivo nos permite gestionar las dependencias y los plugins de nuestro proyecto de una manera
+# centralizada, limpia y súper organizada. ¡Es una de las mejores prácticas modernas en el desarrollo de Android!
+#
+# --- Sección `[versions]` ---
+#
+# Aquí definimos las versiones de nuestras dependencias y plugins en un solo lugar. Si queremos actualizar
+# una biblioteca, solo tenemos que cambiarla aquí, y se actualizará en todos los módulos que la usen.
+# ¡Adiós a tener que cambiar las versiones en 20 sitios distintos!
+#
+# --- Sección `[libraries]` ---
+#
+# En esta sección, definimos los "alias" para nuestras dependencias. Cada alias tiene un grupo, un nombre
+# y una referencia a la versión que hemos definido en la sección `[versions]`.
+#
+# Luego, en nuestros archivos `build.gradle.kts`, en lugar de escribir la cadena completa de la dependencia,
+# podemos usar el alias (p. ej., `implementation(libs.androidx.core.ktx)`). ¡Mucho más limpio y menos propenso a errores!
+#
+# --- Sección `[plugins]` ---
+#
+# De manera similar a la sección de bibliotecas, aquí definimos los alias para nuestros plugins de Gradle.
+# Esto nos permite aplicarlos en nuestros archivos `build.gradle.kts` de una manera más legible y mantenible.
+#
+# En resumen, este archivo es nuestro "catálogo" de dependencias y plugins. Nos ayuda a mantener nuestro
+# proyecto ordenado, a actualizar las bibliotecas fácilmente y a evitar errores de escritura.
+#

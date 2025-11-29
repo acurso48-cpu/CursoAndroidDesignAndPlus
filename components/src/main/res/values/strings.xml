@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Material Components</string>
+    <string name="app_name">MaterialComponents</string>
+    <string name="duck_logo_content_description">Logo de un patito de goma</string>
 </resources>
